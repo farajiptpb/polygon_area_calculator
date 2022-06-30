@@ -30,7 +30,11 @@ class Rectangle:
             return 'Too big for picture'
 
     def get_amount_inside(self, shape):
-        pass
+        area_1 = self.width * self.height
+        area_2 = shape.width * shape.height
+
+        n = area_1//area_2
+        return n
 
     def __str__(self):
         return f"Rectangle(width={self.width}, height={self.height})"
