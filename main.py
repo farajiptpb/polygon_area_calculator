@@ -39,3 +39,24 @@ class Rectangle:
     def __str__(self):
         return f"Rectangle(width={self.width}, height={self.height})"
 
+
+class Square(Rectangle):
+    def __init__(self, side_length):
+        self.side_length = side_length
+        self.width = self.side_length
+        self.height = self.side_length
+
+        super().__init__(width=self.side_length, height=self.side_length)
+
+
+    def set_side(self, length):
+        self.side_length = length
+
+    def __str__(self):
+        return f"Square(side={self.side_length})"
+
+    def set_width(self, width):
+        self.side_length = width
+
+    def set_height(self, height):
+        self.side_length = height
