@@ -27,7 +27,7 @@ class Rectangle:
 
             return picture
         else:
-            return 'Too big for picture'
+            return 'Too big for picture.'
 
     def get_amount_inside(self, shape):
         area_1 = self.width * self.height
@@ -43,14 +43,13 @@ class Rectangle:
 class Square(Rectangle):
     def __init__(self, side_length):
         self.side_length = side_length
-        self.width = self.side_length
-        self.height = self.side_length
 
         super().__init__(width=self.side_length, height=self.side_length)
 
-
     def set_side(self, length):
         self.side_length = length
+        self.width = length
+        self.height = length
 
     def __str__(self):
         return f"Square(side={self.side_length})"
